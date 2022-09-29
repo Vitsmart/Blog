@@ -20,7 +20,7 @@
 .topIcon {
     font-size: 20px;
     margin-right: 10px;
-    color: silver;
+    color: #000;
     cursor: pointer;
 }
 .topImg {
@@ -48,7 +48,7 @@
 }
 .topSearchIcon{
 font-size: 18px;
-color: #666;
+color: #000;
 cursor: pointer;
 margin-left: 15px;
 }

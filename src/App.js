@@ -1,11 +1,12 @@
 import Navigation from "./components/Navigation/Navigation";
-import Single from "./pages/Single/Single";
+//import Single from "./pages/Single/Single";
+import Write from "./pages/Write/Write";
 
 function App() {
   return (
     <div>
         <Navigation />
-        <Single />
+        <Write />
     </div>
   )
 }
