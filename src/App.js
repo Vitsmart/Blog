@@ -9,12 +9,12 @@ import {BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
 
-const user = true;
+const user = false;
 
   return (
     <>
-    <Navigation />
    <BrowserRouter>  
+    <Navigation />
     <Routes>
      <Route path='/' element={<Home />} />
      <Route path='/register' element=

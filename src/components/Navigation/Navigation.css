@@ -6,7 +6,7 @@
     top: 0;
     display: flex;
     align-items: center;
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'Lora', serif;
     z-index: 999;
 }
 .topLeft,.topRight{
@@ -18,7 +18,7 @@
     
 }
 .topIcon {
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 10px;
     color: #000;
     cursor: pointer;
@@ -26,7 +26,7 @@
 .topImg {
     width: 40px;
     height: 40px;
-    border-radius: 25%;
+    border-radius: 20%;
     object-fit: cover;
 }
 .topCenter{

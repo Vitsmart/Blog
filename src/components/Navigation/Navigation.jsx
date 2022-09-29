@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navigation() {
 
-const user = true;
+const user = false;
 
   return (
     <div className='top'>
@@ -21,7 +21,7 @@ const user = true;
             <li className="topListItem">About</li>
             <li className="topListItem"><Link className='link' to='/write'>Write</Link></li>
             <li className="topListItem">
-                {user && "LOGOUT"}</li>
+                {user && "Logout"}</li>
             </ul>
         </div>
         <div className="topRight">

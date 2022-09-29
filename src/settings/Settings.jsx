@@ -17,7 +17,7 @@ export default function Settings() {
                     alt='settingsimg'
                     />
                     <label htmlFor='fileInput'>
-                    <i className="settingsPPIcon fa-solid fa-circle-user"></i>
+                    <i className="settingsPPIcon fa-solid fa-user"></i>
                     </label>
                     <input type="file" id='fileInput' style={{display: "none"}} />
                 </div>

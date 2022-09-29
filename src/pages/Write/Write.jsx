@@ -11,10 +11,10 @@ export default function Write() {
 <form className="writeForm">
     <div className="writeFormGroup">
         <label htmlFor='fileInput'>
-        <i className="writeFormIcon fa-solid fa-plus"></i>
+        <i className="writeFormIcon fa-solid fa-file-arrow-up"></i>
         </label>
-        <input type="file" id='fileInput' style={{display:"none"}}/>
-        <input type="text" placeholder='Title' className='writeInput' autoFocus={true}/>
+        <input type="file" id='fileInput' className='fileUpload' style={{display:"none"}}/>
+        <input type="text" placeholder='Title' className='writeInput tit' autoFocus={true}/>
     </div>
     <div className="writeFormGroup">
         <textarea placeholder='Add your story...' type="text" className='writeInput writeText'></textarea>
