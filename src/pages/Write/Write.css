@@ -4,6 +4,13 @@
 .writeForm{
 position: relative;
 }
+.writeImg{
+    width: 150px;
+    width: 70vh;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
 .writeFormGroup{
     margin-left: 150px;
     display: flex;
@@ -31,10 +38,17 @@ position: relative;
 }
 .writeText{
     font-size: 24px;
+    height: 100vh;
 }
 .writeSubmit{
     position: absolute;
     top: 20px;
     right: 50px;
-    color: white;
+    color: silver;
+    background-color: purple;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }

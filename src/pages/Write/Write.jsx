@@ -3,6 +3,11 @@ import './Write.css'
 export default function Write() {
   return (
     <div className='write'>
+        <img
+        className='writeImg'
+        src='https://static8.depositphotos.com/1329809/808/i/450/depositphotos_8089938-stock-photo-sunny-forest-early-in-the.jpg'
+        alt='writeimag'
+        />
 <form className="writeForm">
     <div className="writeFormGroup">
         <label htmlFor='fileInput'>
