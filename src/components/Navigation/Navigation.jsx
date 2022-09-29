@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navigation.css'
-
+import faceImg from '../../assets/face.jpg'
 
 export default function Navigation() {
   return (
@@ -22,8 +22,8 @@ export default function Navigation() {
         <div className="topRight">
             <img 
             className='topImg'
-            src='https://www.istockphoto.com/photo/beautiful-young-woman-with-clean-fresh-skin-gm1144337675-307607487?phrase=beautiful%20face'
-            alt='user'
+            src={faceImg}
+            alt='user'ay-background-pi
             />
             <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>

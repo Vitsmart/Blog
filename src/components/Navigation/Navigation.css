@@ -1,12 +1,13 @@
 .top {
     width: 100%;
     height: 70px;
-    background-color: yellowgreen;
+    background-color: #753988;
     position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     font-family: 'Sarabun', sans-serif;
+    z-index: 999;
 }
 .topLeft,.topRight{
     flex: 3;
@@ -37,11 +38,12 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
 }
 .topListItem {
     margin-right: 20px;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 600;
     cursor: pointer;
 }
 .topSearchIcon{
