@@ -1,45 +1,42 @@
-.login {
+.register {
     font-family: 'Lora', serif;
     height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
-    ), 
-    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2C6D2GgC7Bx9gtsUmssPOJ6okPL4ck6Iswg&usqp=CAU);
-background-size: cover;
+    background:  
+    url(https://static.vecteezy.com/system/resources/thumbnails/002/160/861/small/detail-wood-texture-background-free-vector.jpg);
+    background-size: cover;
 }
-.loginTitle{
+.registerTitle{
     font-size: 50px;
 }
-.loginForm{
+.registerForm{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
 
 }
-.loginForm > label{
+.registerForm > label{
     margin: 10px 0;
     font-weight: 600;
 }
-.loginInput{
-    padding: 10px;
+.registerInput{
+    padding: 10px 40px;
     background-color: white;
     border: none;
 }
-.loginButton{
+.registerButton{
     margin-top: 20px;
     cursor: pointer;
-    background-color: rgb(167, 245, 10);
+    background-color: rgb(164, 242, 10);
     border: none;
     color: white;
     border-radius: 10px;
     padding: 10px;
 }
-.loginRegisterButton{
+.registerLoginButton{
     position: absolute;
     top: 75px;
     right: 20px;
