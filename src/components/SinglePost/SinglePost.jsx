@@ -16,8 +16,23 @@ export default function SinglePost() {
                 <span className="singlePostAuthor">Author: <b>Vitalis</b></span>
                 <span className="singlePostDate">1 hr ago</span>
             </div>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, explicabo deserunt nulla recusandae quis eligendi quod porro impedit, inventore exercitationem odit eaque cum, vitae dolorum. Natus odit excepturi exercitationem. Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, harum. Commodi, at perferendis? Earum omnis eos, reprehenderit dolore consequuntur mollitia corrupti quisquam porro, iusto repellat sunt. Nam dolorem voluptates eius. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem facilis odit id, eligendi delectus quod pariatur placeat quo voluptas distinctio sit, perspiciatis harum illo, labore earum est iure necessitatibus ipsa!</p>
+            <p className='singlePostDesc'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, explicabo 
+              deserunt nulla recusandae quis eligendi quod porro impedit, inventore exercita
+              tionem odit eaque cum, vitae dolorum. Natus odit excepturi exercitationem. 
+              Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, harum. Commodi, 
+              at perferendis? Earum omnis eos, reprehenderit dolore consequuntur mollitia corrupti quisquam porro, iusto repellat sunt. Nam dolorem voluptates eius. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem facilis odit id, eligendi delectus quod pariatur placeat quo voluptas distinctio sit, perspiciatis harum illo, labore earum est iure necessitatibus ipsa!
+              ipsum dolor sit, amet consectetur adipisicing elit. Ea, explicabo 
+              deserunt nulla recusandae quis eligendi quod porro impedit, inventore exercita
+              tionem odit eaque cum, vitae dolorum. Natus odit excepturi exercitationem. 
+              Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, harum. Commodi, at perferendis? Earum omnis eos, reprehenderit dolore consequuntur mollitia corrupti quisquam porro, iusto repellat sunt. Nam dolorem voluptates eius. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem facilis odit id, eligendi delectus quod pariatur placeat quo voluptas 
+              distinctio sit, perspiciatis harum illo, labore earum est iure necessitatibus ipsa!
+              at perferendis? Earum omnis eos, reprehenderit dolore consequuntur mollitia corrupti quisquam porro, iusto repellat sunt. Nam dolorem voluptates eius. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem facilis odit id, eligendi delectus quod pariatur placeat quo voluptas distinctio sit, perspiciatis harum illo, labore earum est iure necessitatibus ipsa!
+              ipsum dolor sit, amet consectetur adipisicing elit. Ea, explicabo 
+              deserunt nulla recusandae quis eligendi quod porro impedit, inventore exercita
+              </p>
+        
         </div>
+
 
     </div>
   )
