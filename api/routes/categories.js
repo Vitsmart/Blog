@@ -1,9 +1,7 @@
 const router = require("express").Router();
 const Category = require("../models/Category");
 
-
-
-
+// post categories ===========
 router.post("/", async (req, res) => {
     
 const newCat = new Category(req.body);
@@ -15,6 +13,18 @@ res.status(200).json(savedCat);
 }
 
         })
+        // get categories ========
+        router.get("/", async (req, res) => {
+    
+         
+         try{
+         const cats = await Category.find();
+         res.status(200).json(cats);
+         }catch(err){
+            res.status(500).json(err)
+         }
+         
+                 });
       
 
         module.exports = router;
