@@ -4,8 +4,8 @@ const mongoose = require("mongoose")
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
-const postRoute = require("./post/users");
-const categoryRoute = require("./post/categories");
+const postRoute = require("./routes/posts");
+const categoryRoute = require("./routes/categories");
 const multer = require("multer")
 
 app.use(express.json());
@@ -36,7 +36,7 @@ app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
 
-app.listen("5000", () => {
-console.log("Backend is running on port 5000");
+app.listen("5800", () => {
+console.log("Backend is running on port 5800");
 })
 
