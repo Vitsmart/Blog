@@ -14,8 +14,8 @@ dotenv.config();
 mongoose.connect(process.env.MONGO_URL,{
      useNewUrlParser: true,
      useUnifiedTypology: true,
-    useCreateIndex: true,
-}).then(console.log("connected to Mongo db")).catch((err) => console.log(err));
+    
+}).then(console.log("connected to MongoDB")).catch((err) => console.log(err));
 
 const storage = multer.diskStorage({
     destination:(req, file, cb) => {
@@ -38,5 +38,5 @@ app.use("/api/categories", categoryRoute);
 
 app.listen("5000", () => {
 console.log("Backend is running on port 5000");
-})
+});
 
