@@ -13,8 +13,6 @@ app.use(express.json());
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL,{
      useNewUrlParser: true,
-     useUnifiedTypology: true,
-    useCreateIndex: true,
 }).then(console.log("connected to Mongo db")).catch((err) => console.log(err));
 
 const storage = multer.diskStorage({
