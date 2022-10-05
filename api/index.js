@@ -34,7 +34,7 @@ app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
 
-app.listen("5800", () => {
-console.log("Backend is running on port 5800");
+app.listen("5000", () => {
+console.log("Backend is running on port 5000");
 })
 
