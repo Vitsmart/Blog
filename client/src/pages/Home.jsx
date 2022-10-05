@@ -10,17 +10,17 @@ const [posts, setPosts] = useState([]);
 
 useEffect(() => {
   const fetchPosts = async () =>{
-    const res = axios.get("/posts")
-    console.log(res)
+    const res = await axios.get("/posts")
+    setPosts(res.data)
   }
-  fetchPosts();
+  fetchPosts()
 },[])
 
   return (
     <>
         <Header />
     <div className='home'>
-        <Posts />
+        <Posts posts={posts}/>
         <SideBar />
         </div>
         </>
