@@ -1,19 +1,22 @@
 import axios from 'axios';
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { Context } from '../../components/context/Context';
 import './Write.css'
 
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
+  const { user } = useContext(Context);
+  
 
 
 const handleSubmit = async (e) => {
   e.preventDefault();
   const newPost = {
-    username: user.username,
-title,
-desc,
+  username : user.username,
+   title,
+   desc,
   };
   if (file) {
     const data = newFormData();
@@ -55,7 +58,7 @@ desc,
         <input type="file" 
         id='fileInput' className='fileUpload' 
         style={{display:"none"}}
-        onChange={(e) => setFile(e.target.file[0])}
+        onChange={(e) => setFile(e.target.file)}
           />
         <input type="text" 
         placeholder='Title' 

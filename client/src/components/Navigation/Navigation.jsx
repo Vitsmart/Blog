@@ -30,11 +30,14 @@ const handleLogout = () =>{
         <div className="topRight">
             { 
             user ? (
-            <img 
+                <Link to="/settings">
+                <img 
             className='topImg'
             src={user.profilePic}
             alt='user'
             />
+                </Link>
+            
             ) : (
                 <ul className='topList'>
                     <li className='topListItem'>
