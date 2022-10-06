@@ -39,6 +39,10 @@ background-size: cover;
     border-radius: 10px;
     padding: 10px;
 }
+.loginButton:disabled{
+    cursor: not-allowed;
+    background-color: silver;
+}
 .loginRegisterButton{
     position: absolute;
     top: 75px;
