@@ -6,10 +6,12 @@ import Write from "./pages/Write/Write";
 import Home from "./pages/Home";
 import Login from "./pages/Login/Login";
 import {BrowserRouter, Routes, Route } from "react-router-dom"
+import { useContext } from "react";
+import { Context } from "./components/context/Context";
 
 function App() {
 
-const user = false;
+const {user} = useContext(Context);
 
   return (
     <>

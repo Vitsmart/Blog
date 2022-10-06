@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navigation.css'
 import faceImg from '../../assets/face.jpg'
 import { Link } from 'react-router-dom';
+import { Context } from '../context/Context';
 
 export default function Navigation() {
 
-const user = false;
-
+    const {user, dispatch} = useContext(Context);
+const handleLogout = () =>{
+    dispatch({type:"LOGOUT"})
+}
   return (
     <div className='top'>
         <div className="topLeft">
@@ -20,7 +23,7 @@ const user = false;
             <li className="topListItem">Contact</li>
             <li className="topListItem">About</li>
             <li className="topListItem"><Link className='link' to='/write'>Write</Link></li>
-            <li className="topListItem">
+            <li className="topListItem" onClick={handleLogout}>
                 {user && "Logout"}</li>
             </ul>
         </div>
@@ -29,7 +32,7 @@ const user = false;
             user ? (
             <img 
             className='topImg'
-            src={faceImg}
+            src={user.profilePic}
             alt='user'
             />
             ) : (
