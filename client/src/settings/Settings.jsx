@@ -6,7 +6,8 @@ import './Settings.css'
 
 export default function Settings() {
 
-const { user } = useContext(Context);
+const { user, dispatch } = useContext(Context);
+const pf = "http://localhost:5000/images/"
 const [username, setUsername] = useState("");
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
@@ -16,6 +17,7 @@ const [success, setSuccess] = useState(false)
 
 const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch({type:"UPDATE_START"})
     const updatedUser = {
     userId: user._id,
      username, 
@@ -39,9 +41,12 @@ const handleSubmit = async (e) => {
   
     }
     try {
-    await axios.put("/users/" + user._id, updatedUser);
-    setSuccess(true)
-    }catch (err){}
+    const res = await axios.put("/users/" + user._id, updatedUser);
+    setSuccess(true);
+    dispatch({type:"UPDATE_SUCCESS", payload: res.data})
+    }catch (err){
+        dispatch({type:"UPDATE_FAILURE"})
+    }
   }
   
   
@@ -59,7 +64,7 @@ const handleSubmit = async (e) => {
                 <label>Profile picture</label>
                 <div className="settingsPP">
                     <img
-                    src={user.profilePic}
+                    src={file ? URL.createObjectURL(file) : pf + user.profilePic}
                     alt='settingsimg'
                     />
                     <label htmlFor='fileInput'>

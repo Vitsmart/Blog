@@ -9,6 +9,7 @@ export default function Navigation() {
     const {user, dispatch} = useContext(Context);
 const handleLogout = () =>{
     dispatch({type:"LOGOUT"})
+    const pf = "http://localhost:5000/images/"
 }
   return (
     <div className='top'>
@@ -33,7 +34,7 @@ const handleLogout = () =>{
                 <Link to="/settings">
                 <img 
             className='topImg'
-            src={user.profilePic}
+            src={pf + user.profilePic}
             alt='user'
             />
                 </Link>
