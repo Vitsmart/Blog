@@ -3,7 +3,7 @@ import './Navigation.css'
 import faceImg from '../../assets/face.jpg'
 import { Link } from 'react-router-dom';
 import { Context } from '../context/Context';
-import userImg from '../../assets/userImg2.png'
+import userImg from '../../assets/user1.png'
 export default function Navigation() {
 
     const {user, dispatch} = useContext(Context);
