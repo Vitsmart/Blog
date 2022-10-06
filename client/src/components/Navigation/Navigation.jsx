@@ -3,13 +3,13 @@ import './Navigation.css'
 import faceImg from '../../assets/face.jpg'
 import { Link } from 'react-router-dom';
 import { Context } from '../context/Context';
-
+import userImg from '../../assets/userImg2.png'
 export default function Navigation() {
 
     const {user, dispatch} = useContext(Context);
 const handleLogout = () =>{
     dispatch({type:"LOGOUT"})
-    const pf = "http://localhost:5000/images/"
+   // const pf = "http://localhost:5000/images/";
 }
   return (
     <div className='top'>
@@ -34,7 +34,7 @@ const handleLogout = () =>{
                 <Link to="/settings">
                 <img 
             className='topImg'
-            src={pf + user.profilePic}
+            src={user.profilePic ? user.profilePic : userImg}
             alt='user'
             />
                 </Link>

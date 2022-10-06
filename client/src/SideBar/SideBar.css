@@ -30,6 +30,7 @@ text-align: center;
 }
 .sideBarItem > img{
     margin-top: 15px;
+    width: 60%;
 }
 .sideBarItem > p{
     padding: 30px;
