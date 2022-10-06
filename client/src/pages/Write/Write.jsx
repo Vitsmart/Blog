@@ -19,7 +19,7 @@ const handleSubmit = async (e) => {
    desc,
   };
   if (file) {
-    const data = newFormData();
+    const data = new FormData();
     const filename = Date.now() + file.name;
     data.append("name", filename);
     data.append("file", file);
@@ -58,7 +58,7 @@ const handleSubmit = async (e) => {
         <input type="file" 
         id='fileInput' className='fileUpload' 
         style={{display:"none"}}
-        onChange={(e) => setFile(e.target.file)}
+        onChange={(e) => setFile(e.target.files[0])}
           />
         <input type="text" 
         placeholder='Title' 
