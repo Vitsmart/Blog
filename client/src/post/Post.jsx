@@ -4,7 +4,7 @@ import './Post.css'
 
 export default function Post({post}) {
 
-  const pf = "http://localhost:3000/images/";
+  const pf = "http://localhost:5000/images/";
   return (
     <div className='post'>
         {post.photo && (

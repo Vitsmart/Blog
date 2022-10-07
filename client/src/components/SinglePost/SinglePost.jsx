@@ -11,7 +11,7 @@ export default function SinglePost() {
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({})
 
-  const pf = "http://localhost:3000/images/";
+  const pf = "http://localhost:5000/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -30,16 +30,16 @@ export default function SinglePost() {
   
   const handleDelete = async () =>{
     try {
-    await axios.delete(`/posts/${post.id}` ,{data: {username: user.username},
+    await axios.delete(`/posts/${post._id}` ,{data: {username: user.username},
   })
     window.location.replace("/");
     }catch(err) {}
   }
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post.id}` ,{username: user.username, title, desc},
+      await axios.put(`/posts/${post._id}`,{username: user.username, title, desc},
     )
-      //window.location.reload("/");
+      window.location.reload();
       setUpdateMode(false)
       }catch(err) {}
   };
