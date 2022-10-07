@@ -3,10 +3,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import { Context } from '../context/Context';
 import './SinglePost.css'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+
+
 
 export default function SinglePost() {
-
-
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({})
@@ -16,6 +17,7 @@ export default function SinglePost() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
+  const [isloading, setIsloading] =useState(false)
 
 
   useEffect(()=>{
@@ -37,11 +39,14 @@ export default function SinglePost() {
   }
   const handleUpdate = async () => {
     try {
+      setIsloading(true)
       await axios.put(`/posts/${post._id}`,{username: user.username, title, desc},
     )
-      window.location.reload();
+      //window.location.reload();
       setUpdateMode(false)
+      
       }catch(err) {}
+      setIsloading(false)
   };
 
 
@@ -68,16 +73,17 @@ export default function SinglePost() {
              </div> 
              )}    
             </h1>
-            )}
+            )};
+            {isloading ? <LoadingSpinner /> : 
             <div className="singlePostInfo">
                 <span className="singlePostAuthor">Author: 
                 <Link to={`/?user=${post.username}`} className="link">
                 <b>{post.username}</b>
                 </Link>
-                  
+              
                 </span>
                 <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
-            </div>
+            </div>}
             {updateMode ? (
               <textarea className='singlePostDescInput' value={desc} onChange = {(e) => setDesc(e.target.value)}
               />
@@ -87,12 +93,12 @@ export default function SinglePost() {
               </p>
             )}
             {updateMode && (
-            <button className="singlePostButton" onClick={handleUpdate}>Update</button>
+            <button className="singlePostButton" onClick={handleUpdate} disabled={isloading}>Update</button>
             )}
         
         </div>
-
-
+            
     </div>
   )
+            
 }
