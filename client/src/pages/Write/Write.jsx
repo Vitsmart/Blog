@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useContext, useState } from 'react'
 import { Context } from '../../components/context/Context';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 import './Write.css'
 
 export default function Write() {
@@ -8,7 +9,7 @@ export default function Write() {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
-  
+  const [isloading, setIsloading] = useState(false);
 
 
 const handleSubmit = async (e) => {
@@ -26,11 +27,11 @@ const handleSubmit = async (e) => {
     newPost.photo = filename;
 
     try{
+      setIsloading(true)
       await axios.post("/upload", data);
 
-    }catch(err){
-
-    }
+    }catch(err){}
+    setIsloading(false)
 
 
   }
@@ -42,7 +43,9 @@ const handleSubmit = async (e) => {
 
 
   return (
-    <div className='write'>
+<>
+{isloading ? <LoadingSpinner /> : 
+        <div className='write'>
       {file && (
         <img
         className='writeImg'
@@ -76,5 +79,7 @@ const handleSubmit = async (e) => {
     <button className='writeSubmit' type='submit'>Publish</button>
 </form>
     </div>
+}
+    </>
   )
 }

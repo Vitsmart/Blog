@@ -17,7 +17,7 @@ export default function SinglePost() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
-  const [isloading, setIsloading] =useState(false)
+  const [isloading, setIsloading] = useState(false)
 
 
   useEffect(()=>{
@@ -32,10 +32,12 @@ export default function SinglePost() {
   
   const handleDelete = async () =>{
     try {
+      setIsloading(true)
     await axios.delete(`/posts/${post._id}` ,{data: {username: user.username},
   })
     window.location.replace("/");
     }catch(err) {}
+    setIsloading(false)
   }
   const handleUpdate = async () => {
     try {
@@ -52,6 +54,8 @@ export default function SinglePost() {
 
 
   return (
+    <>
+    {isloading ? <LoadingSpinner /> : 
     <div className='singlePost'>
         <div className="singlePostWrapper">
           {post.photo && (
@@ -65,8 +69,6 @@ export default function SinglePost() {
             <h1 className="singlePostTitle">
               {title}
               {post.username === user?.username && (
-
-
             <div className="singlePostEdit">
             <i className="singlePostIcon fa-sharp fa-solid fa-pen-to-square" onClick={() => setUpdateMode(true)}></i>
             <i className="singlePostIcon fa-solid fa-trash-can" onClick={handleDelete}></i>
@@ -74,7 +76,7 @@ export default function SinglePost() {
              )}    
             </h1>
             )};
-            {isloading ? <LoadingSpinner /> : 
+            
             <div className="singlePostInfo">
                 <span className="singlePostAuthor">Author: 
                 <Link to={`/?user=${post.username}`} className="link">
@@ -83,7 +85,7 @@ export default function SinglePost() {
               
                 </span>
                 <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
-            </div>}
+            </div>
             {updateMode ? (
               <textarea className='singlePostDescInput' value={desc} onChange = {(e) => setDesc(e.target.value)}
               />
@@ -99,6 +101,8 @@ export default function SinglePost() {
         </div>
             
     </div>
+}
+    </>
   )
             
 }

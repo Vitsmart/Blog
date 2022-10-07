@@ -2,18 +2,19 @@ import React, { useState } from 'react'
 import './Register.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner'
 
 export default function Register() {
 const [username, setUsername] = useState("")
 const [email, setEmail] = useState("")
 const [password, setPassword] = useState("");
 const [error, setError] = useState(false);
-
+const [isloading, setIsloading] = useState(false)
 const handleSubmit = async (e) =>{
   e.preventDefault();
   setError(false);
   try {
-
+setIsloading(true)
   const res = await axios.post("/auth/register", {
     username,
     email,
@@ -22,9 +23,12 @@ const handleSubmit = async (e) =>{
   res.data && window.location.replace("/login");
 } catch (err){
   setError(true);
+  setIsloading(false)
 }
 }
   return (
+    <>
+    {isloading ? <LoadingSpinner /> : (
     <div className='register'>
         <span className="registerTitle">Register</span>
         <form className="registerForm" onSubmit={handleSubmit}>
@@ -53,5 +57,7 @@ const handleSubmit = async (e) =>{
         </button>
         { error && <span style={{color: "red", marginTop:"10px"}}>Something went Wrong!</span>}
         </div>
+    )}
+        </>
   )
 }

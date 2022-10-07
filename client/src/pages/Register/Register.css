@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     background:  
-    url(https://static.vecteezy.com/system/resources/thumbnails/002/160/861/small/detail-wood-texture-background-free-vector.jpg);
+    url(https://i.pinimg.com/736x/ea/89/0e/ea890e6484b94b46df15560b087bcbdc.jpg);
     background-size: cover;
 }
 .registerTitle{
@@ -30,7 +30,7 @@
 .registerButton{
     margin-top: 20px;
     cursor: pointer;
-    background-color: rgb(164, 242, 10);
+    background-color: rgb(20, 5, 231);
     border: none;
     color: white;
     border-radius: 10px;
@@ -40,7 +40,7 @@
     position: absolute;
     top: 75px;
     right: 20px;
-    background-color: green;
+    background-color: rgb(34, 10, 245);
     cursor: pointer;
     border: none;
     padding: 10px;
