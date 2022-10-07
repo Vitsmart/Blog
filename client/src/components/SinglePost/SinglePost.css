@@ -18,22 +18,26 @@
     margin: 10px;
     font-family: 'Lora', serif;
     font-size: 28px;
+    
 }
 .singlePostTitleInput {
+    
     margin: 10px;
     font-family: 'Lora', serif;
     font-size: 28px;
     text-align: center; 
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid gray;  
 }
+
+
 .singlePostTitleInput:focus {
 outline: none;
 }
 
 .singlePostEdit{
     float: right;
-    font-size: 16px;
+    font-size: 26px;
 }
 .singlePostIcon{
     margin-left: 10px;
@@ -63,6 +67,8 @@ border: none;
 color: #666;
 font-size: 18px;
 line-height: 25px;
+height: 40vh;
+width: 50vh;
 }
 .singlePostDescInput:focus {
     outline: none;
@@ -76,10 +82,12 @@ line-height: 25px;
 .singlePostButton {
     width: 100px;
     border: none;
-    background-color: yellowgreen;
-    padding: 5px;
+    background-color: rgb(74, 11, 247);
+    padding: 10px;
     color: white;
     border-radius: 5px;
     align-self: flex-end;
     cursor: pointer;
+    position: relative;
+    
 }
