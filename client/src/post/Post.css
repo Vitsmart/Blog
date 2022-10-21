@@ -4,6 +4,7 @@
     height: 650px;
     background-color: #efefef;
     padding: 0.8rem 0.8rem;
+    border-radius: 10px;
 }
 .postImg{
     width: 100%;

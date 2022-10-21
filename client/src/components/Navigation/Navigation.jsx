@@ -3,7 +3,7 @@ import './Navigation.css'
 import faceImg from '../../assets/face.jpg'
 import { Link } from 'react-router-dom';
 import { Context } from '../context/Context';
-import userImg from '../../assets/userImg1.png'
+import userImg from '../../assets/profile.jpg'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 
@@ -55,6 +55,7 @@ setIsloading(false)
             src={user.profilePic ? user.profilePic : userImg}
             alt='user'
             />
+            <p className='profile'>Profile</p>
                 </Link>
             
             ) : (

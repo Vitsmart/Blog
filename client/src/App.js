@@ -25,7 +25,7 @@ const {user} = useContext(Context);
      {user ? <Home/> : <Register />} />
      <Route path='/login' element={user ? <Home/> :<Login/>} />
      <Route path='/write' element={<Write/>} />
-     <Route path='/settings' element={user ? <Home/> :<Settings />} />
+     <Route path='/settings' element={<Settings />} />
      <Route path='post/:postId' element={<Single />} />
 
     
