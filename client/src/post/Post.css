@@ -5,6 +5,10 @@
     background-color: #efefef;
     padding: 0.8rem 0.8rem;
     border-radius: 10px;
+    
+}
+.post:hover{
+    transform: scaleY(1.1)
 }
 .postImg{
     width: 100%;
