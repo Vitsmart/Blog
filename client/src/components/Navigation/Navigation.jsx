@@ -32,6 +32,8 @@ setIsloading(false)
         </div>
         {isloading ? <LoadingSpinner /> : (
         <div className="topCenter">
+                
+                {user &&
             <ul className="topList">
             <li className="topListItem"><Link className='link' to='/'>Home</Link></li>
             <li className="topListItem">Contact</li>
@@ -40,6 +42,8 @@ setIsloading(false)
             <li className="topListItem" onClick={handleLogout} >
                 {user && "Logout"}</li>
             </ul>
+              } 
+              
         </div>
         )}
         <div className="topRight">

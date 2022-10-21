@@ -22,6 +22,7 @@ useEffect(() => {
     <>
         <Header />
     <div className='home'>
+     
         <Posts posts={posts} />
         <SideBar />
         </div>

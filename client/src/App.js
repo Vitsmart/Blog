@@ -16,9 +16,9 @@ const {user} = useContext(Context);
   return (
     <>
    <BrowserRouter>  
-   {user &&
+   
     <Navigation />
-   }
+   
     <Routes>
      <Route path='/' element={<Home />} />
      <Route path='/register' element=

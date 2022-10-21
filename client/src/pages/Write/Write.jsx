@@ -37,7 +37,7 @@ const handleSubmit = async (e) => {
   }
   try {
   const res = await axios.post("/posts", newPost);
-  window.location.replace("/post/" + res.data._id);
+  window.location.replace("/");
   }catch (err){}
 }
 
@@ -71,7 +71,7 @@ const handleSubmit = async (e) => {
         />
     </div>
     <div className="writeFormGroup">
-        <textarea placeholder='Add your story...' 
+        <textarea placeholder='Write or upload your story...' 
         type="text" 
         className='writeInput writeText'
         onChange={(e) => setDesc(e.target.value)}></textarea>

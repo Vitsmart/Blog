@@ -11,7 +11,7 @@ export default function Post({post}) {
         <img 
         className='postImg'
         src={pf + post.photo}
-        alt=''
+        alt='blogimage'
         />
         )}
         <div className="postInfo">

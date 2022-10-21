@@ -21,6 +21,10 @@ useEffect(()=>{
   return (
     <>
     <div className="sideBar">
+    <div className='side-article'>
+      <h2 className='articl'>Write an article</h2>
+      <button className='btn-article'><a href='/write'>write</a></button>
+      </div>
         <div className="sideBarItem">
             <span className="sideBarTitle">ABOUT ME</span>
         

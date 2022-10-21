@@ -8,6 +8,43 @@
     flex-direction: column;
     align-items: center;
 }
+.side-article{
+    margin: 0 3rem;
+    margin-top: 3rem;
+    justify-content: center;
+   
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    
+    display: block;
+}
+.articl{
+    justify-content: center;
+    margin-left: 3rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.btn-article{
+    margin-top: 2rem;
+    padding: 1rem 1.8rem;
+    background-color: rgb(54, 42, 228);
+    color: #fff;
+    border-radius: 10%;
+    margin-left: 6rem;
+    border: none;
+    text-transform: uppercase;
+}
+.btn-article:hover{
+    background-color: #a7a4a4;
+    transform: scale(1.1);
+    color: #fff;
+}
 .sideBarItem {
     display: flex;
     flex-direction: column;
