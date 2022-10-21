@@ -63,6 +63,9 @@ color: #222;
 font-weight: 600;
 line-height: 20px;
 text-align: center;
+animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 
 }
 .sideBarItem > img{

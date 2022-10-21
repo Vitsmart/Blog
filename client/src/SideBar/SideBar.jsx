@@ -22,8 +22,8 @@ useEffect(()=>{
     <>
     <div className="sideBar">
     <div className='side-article'>
-      <h2 className='articl'>Write an article</h2>
-      <button className='btn-article'><a href='/write'>write</a></button>
+      <h2 className='articl'>Post an article</h2>
+      <button className='btn-article'><a href='/write'>Post</a></button>
       </div>
         <div className="sideBarItem">
             <span className="sideBarTitle">ABOUT ME</span>
