@@ -8,8 +8,9 @@
     align-items: center;
     font-family: 'Lora', serif;
     z-index: 999;
-    
 }
+
+
 
 
 .topLeft,.topRight{
@@ -76,4 +77,16 @@ margin-left: 15px;
 .profile:hover{
     color: blue;
     transform: scale(1.1);
+}
+
+@media only screen and (max-width:400px) {
+    .top{
+        max-width: 100vw;
+    }
+    .topIcon{
+        display: none;
+    }
+    .topRight,.topLeft{
+        display: none;
+    }
 }

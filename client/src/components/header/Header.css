@@ -70,3 +70,17 @@
     margin-top: 80px;
     object-fit: cover;
 }
+@media only screen and (max-width:400px) {
+  .header{
+margin-top: 40px;
+      
+  }
+  .headerTitleLg{
+    
+    font-size: 80px;
+  }
+.headerTitleImg{
+  height: 300px;
+  margin-top: 60px;
+}
+}
